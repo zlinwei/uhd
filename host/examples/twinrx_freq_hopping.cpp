@@ -265,7 +265,7 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
 
         auto end_time = boost::get_system_time();
         std::cout << boost::format("Sweep done in %d milliseconds.\n")
-                         % ((end_time - start_time).total_milliseconds() * 1000);
+                         % ((end_time - start_time).total_milliseconds());
 
         // Optionally convert received samples to FFT and write to file
         if (vm.count("fft-path")) {
